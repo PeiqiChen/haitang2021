@@ -1,14 +1,14 @@
 const APP_CODE="e56feede0d3c4c08addf2ddd8a4fb2ea"
 const BASE_URL="https://plant.market.alicloudapi.com/"
+// const BASE_URL = "https://plantgw.nongbangzhu.cn/"
 
 const fs = wx.getFileSystemManager()//require('./fs.js');
 // var request = require('request');
-console.log("utils!")
 function main() {
   console.log("main!")
-  res1 = recognize2();
-  // res2 = info();
-  // res3 = weed();
+  // recognize2();
+  // info();
+  weed();
   // console.log(res1,res2,res3);
 }
 
@@ -26,6 +26,7 @@ function recognize2() {
   };
 
   res = post(apiContextUrl, formData);
+  // console.log(res)
   return res;
 }
 
@@ -50,7 +51,7 @@ function info() {
 */
 function weed() {
   //先准备数据
-  var img_base64 = base64_encode('https://lv.nongbangzhu.cn/resources/image/32b33fda-2b42-4852-ae4e-156d2d3eb485.jpg');
+  var img_base64 = base64_encode('/data/weed.jpg');
   var apiContextUrl = 'plant/recognize_weed';
 
   var formData = {
@@ -70,26 +71,6 @@ function post(apiContextUrl, formData) {
       form: formData
   };
 
-  // request.post(options, function(err, httpResponse, body){
-  //     if (err) {
-  //         console.error('请求失败:', err);
-  //     } else {
-  //         console.log('请求成功：', body);
-  //     }
-  // });
-//   fetch(opts.url, opts)
-//         .then((response) => {
-// //你可以在这个时候将Promise对象转换成json对象:response.json()
-//     //转换成json对象后return，给下一步的.then处理
-//     console.log(response.text)
-//             return response.text
-//         })
-//         .then((responseText) => {
-//             alert(responseText)
-//         })
-//         .catch((error) => {
-//             alert(error)
-//         })
 
         wx.request({
           url : opts.url,
@@ -99,7 +80,9 @@ function post(apiContextUrl, formData) {
             "Content-Type": "application/x-www-form-urlencoded"
           },
           success: function (res) {
-            console.log(res.data);
+            console.log(res);
+            console.log('success!')
+            return res
             // wx.navigateBack({
             //   delta: 1  //小程序关闭当前页面返回上一页面
             // })
