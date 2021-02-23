@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/plantgw/plantgw"
+  ],
+  
+  "tabBar": {
+    "color": "@navTxtStyle",
+    "selectedColor": "blue",
+    "backgroundColor": "@navBgColor",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "home"
+      },
+      {
+        "pagePath": "pages/plantgw/plantgw",
+        "text": "recognize"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "haitang2021"
+  },
+  "sitemapLocation": "sitemap.json",
+  "themeLocation": "theme.json",
+  "darkmode": true
+  
+}

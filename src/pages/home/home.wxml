@@ -1,0 +1,5 @@
+<view>
+  <image src="https://picsum.photos/200"></image>
+  <text class="title">hello {{name}},{{now}}</text>
+  <button bind:tap="buttonHandler">点击</button>
+</view>
