@@ -1,5 +1,5 @@
 const APP_CODE="e56feede0d3c4c08addf2ddd8a4fb2ea"
-const BASE_URL="https://plantgw.nongbangzhu.cn/"
+const BASE_URL="https://plant.market.alicloudapi.com/"
 
 const fs = wx.getFileSystemManager()//require('./fs.js');
 // var request = require('request');
