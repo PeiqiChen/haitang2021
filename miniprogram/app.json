@@ -1,8 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/talk/talk",
+    "pages/vr/vr",
+    "pages/my_comment/my_comment",
+    "pages/my_talk/my_talk"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -11,5 +14,36 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#64b917",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/homed.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "images/vred.png",
+        "iconPath": "images/vr.png",
+        "pagePath": "pages/vr/vr",
+        "text": "VR地图"
+      },
+      {
+        "selectedIconPath": "images/talked.png",
+        "iconPath": "images/talk.png",
+        "pagePath": "pages/talk/talk",
+        "text": "花圃"
+      },
+      {
+        "selectedIconPath": "images/mined.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
 }

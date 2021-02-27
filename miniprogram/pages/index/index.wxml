@@ -1,1 +1,20 @@
 <!--index.wxml-->
+<view class="outside_block">
+  <view class="top_block">
+    <view class="top_title_block">
+      <text class="iconfont icon-tju"></text>
+      <view class="title">天大数字景观</view>
+    </view>
+    <view class="top_button_block">
+      <text class="iconfont icon-camera" bindtap="toCamera"></text>
+      <text class="iconfont icon-scan" bindtap="toScan"></text>
+    </view>
+  </view>
+
+  <view class="select_block">
+    <picker mode="selector" range="{{types}}" bindchange="changePlant">点击选择植物：{{type}}</picker>
+  </view>
+  <view class="map_block">
+    <map></map>
+  </view>
+</view>

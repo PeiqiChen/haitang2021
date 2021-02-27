@@ -1,2 +1,44 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="header">
+  <view class="user" hoverClass="none">
+    <view class="user_box">
+      <view class="logo">
+        <!--数据动态绑定profile.js中data中对应名字的数据 -->
+        <image src="{{avatarUrl}}"></image>
+      </view>
+      <view class="user_info">
+        <button wx:if="{{!hasLogged}}" class="login_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <text>请点击登录</text>
+        </button>
+        <view wx:else class="user_name">
+          <text>你好，{{nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="nav">
+  <navigator url="/pages/my_comment/my_comment" hover-class="none">
+    <view class="item">
+      <view class="alpha">
+        <text class="iconfont icon-talk" style="color:#64b917"></text>
+        <view class='wallet'>我的互动</view>
+      </view>
+      <view class="beta">
+        <text class="iconfont icon-enter" style="color:#64b917"></text>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/my_talk/my_talk" hover-class="none">
+    <view class="item">
+      <view class="alpha">
+        <text class="iconfont icon-huapu" style="color:#64b917"></text>
+        <view class='wallet'>我的花圃</view>
+      </view>
+      <view class="beta">
+        <text class="iconfont icon-enter" style="color:#64b917"></text>
+      </view>
+    </view>
+  </navigator>
+</view>
