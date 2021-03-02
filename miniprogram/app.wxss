@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "/utils/iconfont.wxss";
+
+page {
+  font-family: "siyuan";
+}

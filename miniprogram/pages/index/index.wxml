@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="outside_block">
+  <view class="top_block">
+    <view class="top_title_block">
+      <text class="iconfont icon-tju"></text>
+      <view class="title">天大数字景观</view>
+    </view>
+    <view class="top_button_block">
+      <text class="iconfont icon-camera" bindtap="toCamera"></text>
+      <text class="iconfont icon-scan" bindtap="toScan"></text>
+    </view>
+  </view>
+
+  <view class="select_block">
+    <view class="picker" bindtap="changePlant">点击选择植物：{{type}}</view>
+  </view>
+  <view class="map_block">
+    <map id="myMap" 
+        longitude="117.17"
+        latitude="39.105"
+        scale="15"
+        markers="{{markers}}"
+        bindmarkertap="marketTap"
+    >
+        <cover-view slot="callout">
+          <block wx:for="{{customCalloutMarkerIds}}">
+            <cover-view class="callout_box" marker-id="{{item}}">
+              <cover-image src="{{markers[item].url}}" class="callout_img" data-src="{{markers[item].url}}" bindtap="viewPic"></cover-image>
+              <cover-view class="callout_text">{{markers[item].name}}</cover-view>
+            </cover-view>
+          </block>
+        </cover-view>
+    </map>
+  </view>
+</view>

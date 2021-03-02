@@ -1,0 +1,78 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+
+.outside_block{
+  height: 100%;
+  width: 100%;
+}
+
+.top_block{
+  height: 200rpx;
+  background-color: #64b917;
+  color: white;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.top_title_block{
+  display: flex;
+}
+
+.top_title_block, .top_button_block{
+  width: 50%;
+  padding-top: 100rpx; 
+}
+
+.iconfont{
+  font-size: 50rpx;
+}
+
+.icon-scan{
+  margin-left: 35rpx;
+}
+
+.title{
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.select_block{
+  padding: 0 40rpx;
+}
+
+.picker{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.map_block{
+  height: 100%;
+}
+
+map{
+  width: 100%;
+  height: 100%;
+}
+
+.callout_box{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.callout_img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.callout_text{
+  margin-bottom: 30rpx;
+}

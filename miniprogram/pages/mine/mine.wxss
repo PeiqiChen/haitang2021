@@ -1,0 +1,93 @@
+/* miniprogram/pages/mine/mine.wxss */
+page {
+  height: 100%;
+  background: #f8f8f8;
+}
+
+.header {
+  padding: 0 55rpx;
+  padding-top: 40rpx;
+  padding-bottom: 50rpx;
+  width: 100%;
+  background: linear-gradient(#64b917, #82c738); /*渐变色*/
+  position:relative;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_box {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background: #fff;
+  will-change: transform;
+  position:relative;
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+.user_info {
+  padding-left: 32rpx;
+}
+
+.user_name {
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.login_button{
+  background-color: rgb(100, 185, 23, 0);
+  color: white;
+}
+
+.login_button::after{
+  border: none;
+}
+
+.nav {
+  padding: 0 25rpx;
+  font-size: 34rpx;
+  background: #fff;
+}
+
+.nav .item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30rpx 30rpx;
+  
+}
+
+.item view{
+  justify-items: center;
+}
+
+.alpha{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wallet{
+  margin-left: 30rpx;
+}
+
+.icon-talk, .icon-huapu{
+  font-size: 50rpx;
+}

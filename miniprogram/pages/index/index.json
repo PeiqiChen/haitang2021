@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-index-list": "@miniprogram-component-plus/index-list/index"
+  },
+  "navigationStyle": "custom"
+}

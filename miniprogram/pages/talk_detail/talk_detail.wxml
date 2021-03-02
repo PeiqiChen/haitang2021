@@ -1,0 +1,47 @@
+<!--miniprogram/pages/talk_detail/talk_detail.wxml-->
+<view class="outside_block">
+  <view class="new_block">
+    <view class="title_block">
+      <view class="avatar_block">
+        <image id="owner_avatar" class="comment_avatar" src="{{newData.avatarUrl}}"></image>
+      </view>
+      <view class="name_block">
+        <view class="comment_nickName">{{newData.nickName}}</view>
+        <view id="time">{{newData.time.year}}.{{newData.time.month > 9 ? newData.time.month : '0' + newData.time.month}}.{{newData.time.day > 9 ? newData.time.day : '0' + newData.time.day}} {{newData.time.hour > 9 ? newData.time.hour : '0' + newData.time.hour}}:{{newData.time.minute > 9 ? newData.time.mimnute : '0' + newData.time.minute}}</view>
+      </view>
+    </view>
+    
+    <view class="picture_block">
+      <!-- widthfix使图片固定宽度，高度自适应, data-src在出发点击事件的参数中，传递名为src的参数-->
+      <image id="picture" src="{{newData.picUrl}}" data-src="{{newData.picUrl}}" mode="widthFix" bindtap="viewImage"></image>
+    </view>
+    <view class="content_block">
+      <text id="content">{{newData.content}}</text>
+    </view>
+    <view class="comment_block">
+      <view class="comment_title_block">
+        全部评论
+        <text id="comment_number">{{newData.numberOfComments}}</text>
+      </view>
+      <block wx:for="{{newData.comments}}">
+        <view class="one_comment_block">
+          <image class="comment_avatar" src="{{item.avatarUrl}}" mode="widthFix" bindtap="viewImage"></image>
+          <view class="comment_nickName">{{item.nickName}}</view>
+          <view class="comment_delete">
+            <text class="iconfont icon-delete" wx:if="{{item.openId === openId}}" bindtap="deleteComment"></text>
+          </view>
+          <view class="comment_content">{{item.content}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="bottom_block">
+    <image id="avatar" src="{{avatarUrl}}" mode="widthFix"></image>
+    <!-- fixed属性有什么用，为什么要添加，删除后会发生什么（请在真机中测试） -->
+    <textarea id="comment" placeholder="我来说两句..." auto-height="true" fixed="true" value="{{commentValue}}" bindconfirm="add_comment"></textarea>
+    <view class="likes_number_block" style="color: {{youLike ? 'red' : rgb(87, 86, 86)}}" bindtap="like">
+      <text class="iconfont icon-like"></text>
+      <text id="like_number">{{newData.numberOfLikes}}</text>
+    </view>
+  </view>
+</view>
