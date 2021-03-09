@@ -1,2 +1,15 @@
 <!--miniprogram/pages/talk/talk.wxml-->
-<text>miniprogram/pages/talk/talk.wxml</text>
+<view class="outside_block">
+  <view class="top_block">
+    <view class="top_button_block">
+      <text class="iconfont icon-huapu"></text>
+      <text class="title">花圃 </text>
+    </view>
+  </view>
+  <view class="talk-box">
+    <block wx:for="{{moments}}">
+      <talk_item avatar_url="{{item.avatarUrl}}" user_name="{{item.nickName}}" post_date='{{item.time}}' post_content="{{item.content}}" post_img="{{item.picUrl}}" like_number="{{item.numberOfLikes}}" comment_number="{{item.numberOfComments}}" bindtap="toDetail" data-id="{{item['_id']}}"></talk_item>
+    </block>
+  </view>
+</view>
+<view class="add_button" bindtap="toAdd"><text class="iconfont icon-add"></text></view>

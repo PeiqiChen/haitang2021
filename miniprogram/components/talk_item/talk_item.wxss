@@ -1,0 +1,85 @@
+/* components/talk_item.wxss */
+@import "../../utils/iconfont.wxss";
+
+.talk-item-wrapper {
+  border-bottom: thick solid #64b917;
+  padding: 10rpx 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.talk-item-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: thin solid #696969;
+}
+
+.user-name{
+  font-size: 35rpx;
+  color: #323332;
+}
+
+.post-date{
+  font-size: 28rpx;
+  color:#d0d3cf
+}
+
+.talk-item-post-content{
+  font-size: 34rpx;
+  color: #323332;
+}
+
+.talk-item-user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin-left: 15rpx;
+}
+
+.talk-item-user-info > view{
+  width: 100%;
+}
+
+.talk-item-avatar, .talk-item-user-info{
+  margin-top: 40rpx;
+}
+
+.post-date {
+  color: #696969;
+}
+
+.talk-item-post-content {
+  width: 100%;
+  margin: 40rpx 0;
+}
+
+.pic{
+  width: 100%;
+}
+
+.talk-item-icon {
+  width: 100%;
+  text-align: right;
+  color: #696969;
+  margin: 20rpx 0 20rpx 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+
+.icon-font{
+  font-size: 30rpx;
+}
+
+.icon-comment {
+  margin-left: 30rpx;
+}
+
+.talk-item-show-comment-wrapper {
+  padding-top: 20rpx;
+  border-top: thin solid #c3c3c3;
+  margin-bottom: 20rpx;
+}

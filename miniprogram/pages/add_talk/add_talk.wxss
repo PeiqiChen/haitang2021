@@ -1,0 +1,70 @@
+/* miniprogram/pages/add_talk/add_talk.wxss */
+page{
+  height: 100%;
+}
+
+view{
+  box-sizing: border-box;
+}
+
+.outside_block{
+  height: 100%;
+  padding: 80rpx 50rpx 30rpx 50rpx;
+}
+
+#title_input, #content_input{
+  border-style: dotted;
+  border-width: 1rpx;
+  border-color: rgb(133, 133, 133);
+}
+
+#title_input{
+  font-size: 45rpx;
+  height: 300rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.author_block{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+#author{
+  color: rgb(82, 82, 255);
+}
+
+.image_block{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#new_img{
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.image_block button{
+  width: 40%;
+}
+
+.content_block{
+  margin-top: 30rpx;
+}
+
+#content_input{
+  font-size: 35rpx;
+  width: 95%;
+  box-sizing: content-box;
+  padding: 2.5%;
+  height: 380rpx;
+}
+
+#submit, #type{
+  margin-top: 50rpx;
+  width: 100%;
+}

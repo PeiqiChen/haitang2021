@@ -9,75 +9,13 @@ Page({
   },
 
   onLoad: function (options) {
-    let that = this;
-
-    wx.showLoading({
-      title: '获取授权信息中...',
-    })
-
-    wx.getSetting({
-      success: function(res){
-        if (res.authSetting['scope.userInfo']){//登陆过
-          app.globalData.auth['scope.userInfo'] = true
-          console.log("已授权");
-
-          wx.getUserInfo({
-            success: function(res){
-              app.globalData.userInfo = res.userInfo;
-
-              wx.cloud.callFunction({
-                name: "update_users",
-                data: {
-                  nickName: res.userInfo.nickName,
-                  avatarUrl: res.userInfo.avatarUrl,
-                  gender: res.userInfo.gender
-                },
-                success: function(res){
-                  app.globalData.openId = res.result.openId;
-                  console.log("用户信息更新成功");
-
-                  that.setData({
-                    hasLogged: true,
-                    nickName: app.globalData.userInfo.nickName,
-                    avatarUrl: app.globalData.userInfo.avatarUrl
-                  })
-                },
-
-                fail: function(err){
-                  wx.showToast({
-                    title: "更新用户信息失败，请检查你的网络状态",
-                    duration: 1000,
-                    icon: "none"
-                  });
-                  console.error("云函数update_userInfo调用失败", err.errMsg);
-                }
-              })
-            },
-            fail: function(err){
-              wx.showToast({
-                title: "获取用户信息失败，请检查你的网络状态",
-                duration: 1000,
-                icon: "none"
-              });
-              console.error("wx.getUserInfo调用失败", err.errMsg);
-            }
-          })
-        }else{
-          console.log("未授权");
-        }
-      },
-      fail: function(err){
-        wx.showToast({
-          title: "请检查你的网络状态",
-          duration: 1000,
-          icon: "none"
-        });
-        console.error("wx.getSetting调用失败", err.errMsg);
-      },
-      complete: function(){
-        wx.hideLoading();
-      }
-    })
+    if (app.globalData.auth['scope.userInfo']){
+      this.setData({
+        hasLogged: true,
+        nickName: app.globalData.userInfo.nickName,
+        avatarUrl: app.globalData.userInfo.avatarUrl
+      })
+    }
   },
 
   getUserInfo: function(e){
@@ -116,6 +54,7 @@ Page({
           app.globalData.openId = res.result.openId;
           app.globalData.auth['scope.userInfo'] = true;
           console.log("授权成功");
+          console.log(app.globalData);
 
           //跳转至主页面
           that.setData({
@@ -139,6 +78,38 @@ Page({
         duration: 1000
       })
     }
+  },
+
+  toMyComment: function(){
+    if (!app.globalData.auth['scope.userInfo']) {
+      wx.showToast({
+        title: '请先授权登录',
+        icon: 'none',
+        duration: 2000
+      })
+
+      return false;
+    }
+
+    wx.navigateTo({
+      url: '/pages/my_comment/my_comment',
+    })
+  },
+
+  toMyTalk: function(){
+    if (!app.globalData.auth['scope.userInfo']) {
+      wx.showToast({
+        title: '请先授权登录',
+        icon: 'none',
+        duration: 2000
+      })
+
+      return false;
+    }
+
+    wx.navigateTo({
+      url: '/pages/my_talk/my_talk',
+    })
   },
 
   onShareAppMessage: function () {

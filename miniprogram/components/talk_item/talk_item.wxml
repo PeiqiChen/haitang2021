@@ -1,0 +1,18 @@
+<!--components/talk_item.wxml-->
+<view class="talk-item-wrapper">
+  <image class='talk-item-avatar' mode="aspectFit" src="{{avatar_url}}"></image>
+  <view class="talk-item-user-info">
+    <view class='user-name'>{{user_name}}</view>
+    <view class="post-date">{{post_date.year}}.{{post_date.month > 9 ? post_date.month : '0' + post_date.month}}.{{post_date.day > 9 ? post_date.day : '0' + post_date.day}} {{post_date.hour > 9 ? post_date.hour : '0' + post_date.hour}}:{{post_date.minute > 9 ? post_date.mimnute : '0' + post_date.minute}}</view>
+  </view>
+  <view class='talk-item-post-content'>{{post_content}}</view>
+  <image class="pic" mode="widthFix" src="{{post_img}}" lazy-load="true"></image>
+
+
+  <view class="talk-item-icon">
+    <text class="iconfont icon-like"></text>
+    <text class="iconfont"> {{like_number}}</text>
+    <text class="iconfont icon-comment"></text>
+    <text class="iconfont">{{comment_number}}</text>
+  </view>
+</view>

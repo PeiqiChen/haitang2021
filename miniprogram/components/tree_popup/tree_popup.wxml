@@ -1,0 +1,31 @@
+<!--components/tree_popup/tree_popup.wxml-->
+<view class="wx-popup" hidden="{{flag}}" >
+  <scroll-view scroll-y="true"  class='popup-container'>
+    <view class="wx-popup-title">{{title}}</view>
+
+    <view class='wx-popup-item'>
+      <text class="wx-popup-con">简介：</text>
+      <text class="wx-popup-val">{{description}}</text>
+    </view>
+
+    <view class='wx-popup-item'>
+      <text class="wx-popup-con">生长环境：</text>
+      <text class="wx-popup-val">{{env}}</text>
+    </view>
+
+    <view class='wx-popup-item'>
+      <text class="wx-popup-con">分布范围：</text>
+      <text class="wx-popup-val">{{area}}</text>
+      </view>
+
+    <view class='wx-popup-item'>
+      <text class="wx-popup-con">价值：</text>
+      <text class="wx-popup-val">{{value}}</text>
+    </view>
+  
+    <view class="wx-popup-btn">
+      <!-- <text class="btn-no" bindtap='_error'>{{btn_no}}</text> -->
+      <text class="btn-ok" bindtap='_success'>{{btn_ok}}</text>
+    </view>
+  </scroll-view >
+</view>

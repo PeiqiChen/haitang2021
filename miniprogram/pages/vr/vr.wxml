@@ -1,2 +1,3 @@
 <!--miniprogram/pages/vr/vr.wxml-->
-<text>miniprogram/pages/vr/vr.wxml</text>
+<text>加载中...</text>
+<web-view src="http://vr.tju.edu.cn"></web-view>

@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "mp-index-list": "@miniprogram-component-plus/index-list/index",
+    "popup": "../../components/popup/popup",
+    "tree_popup":"../../components/tree_popup/tree_popup"
+  },
   "navigationStyle": "custom"
 }

@@ -1,2 +1,8 @@
 <!--miniprogram/pages/my_comment/my_comment.wxml-->
-<text>miniprogram/pages/my_comment/my_comment.wxml</text>
+<view class="outside_block">
+  <view class="talk-box">
+    <block wx:for="{{moments}}">
+      <talk_item avatar_url="{{item.avatarUrl}}" user_name="{{item.nickName}}" post_date='{{item.time}}' post_content="{{item.content}}" post_img="{{item.picUrl}}" like_number="{{item.numberOfLikes}}" comment_number="{{item.numberOfComments}}" bindtap="toDetail" data-id="{{item['_id']}}"></talk_item>
+    </block>
+  </view>
+</view>

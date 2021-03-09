@@ -57,6 +57,10 @@ page {
   color: white;
 }
 
+.login_button::after{
+  border: none;
+}
+
 .nav {
   padding: 0 25rpx;
   font-size: 34rpx;

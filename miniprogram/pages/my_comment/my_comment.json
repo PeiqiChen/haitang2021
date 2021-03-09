@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "talk_item": "../../components/talk_item/talk_item"
+  },
+  "navigationBarTitleText": "我的评论",
+  "navigationBarBackgroundColor": "#64b917",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
 }

@@ -57,6 +57,15 @@ exports.main = async (event, context) => {
   }
 
   if (success) {
+    await db.collection("moments").where({
+      openId: openid
+    }).update({
+      data: {
+        nickName: event.nickName,
+        avatarUrl: event.avatarUrl
+      }
+    })
+
     return {
       openId: openid,
       log: "ok"

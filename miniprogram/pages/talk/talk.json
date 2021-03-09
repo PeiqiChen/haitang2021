@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "talk_item": "../../components/talk_item/talk_item"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
 }

@@ -1,0 +1,11 @@
+<!--miniprogram/pages/select_flower/select_flower.wxml-->
+<van-index-bar index-list="{{indexList}}">
+  <block wx:for="{{flower}}">
+    <view>
+      <van-index-anchor index="{{item.alpha}}" />
+      <block wx:for="{{item.subItems}}">
+        <van-cell title="{{item.name}}" data-name="{{item.name}}" bindtap="onChoose"/>
+      </block>
+    </view>
+  </block>  
+</van-index-bar>

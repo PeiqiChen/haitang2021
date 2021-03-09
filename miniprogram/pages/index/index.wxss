@@ -9,7 +9,7 @@ page{
 }
 
 .top_block{
-  height: 200rpx;
+  height: 146rpx;
   background-color: #64b917;
   color: white;
   justify-content: space-between;
@@ -18,21 +18,37 @@ page{
   box-sizing: content-box;
 }
 
-.top_title_block{
-  display: flex;
+.top_title_block .title{
+  font-size: 36rpx;
 }
 
 .top_title_block, .top_button_block{
   width: 50%;
-  padding-top: 100rpx; 
+  padding-top: 70rpx;
+  display: flex;
+  /* align-content: center; */
+  /* align-items: center; */
 }
 
 .iconfont{
   font-size: 50rpx;
 }
+.icon-tju{
+  font-size: 54rpx;
+  margin-bottom: 10rpx;
+}
+/* .iconfont icon-camera{
+  font-size: 50rpx;
+}
+
+.iconfont icon-scan{
+  font-size: 30rpx;
+} */
 
 .icon-scan{
+  margin-top: 10rpx;
   margin-left: 35rpx;
+  font-size: 39rpx;
 }
 
 .title{
@@ -44,17 +60,32 @@ page{
   padding: 0 40rpx;
 }
 
-.select_block picker{
+.picker{
   height: 100rpx;
   display: flex;
   align-items: center;
-}
-
-.map_block{
-  height: 100%;
+  font-size: 32rpx;
+  color: #64b917;
 }
 
 map{
   width: 100%;
-  height: 100%;
+}
+
+.callout_box{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.callout_img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.callout_text{
+  margin-bottom: 30rpx;
 }

@@ -1,1 +1,52 @@
 /* miniprogram/pages/my_comment/my_comment.wxss */
+page{
+  height: 100%;
+}
+
+.outside_block{
+  height: 100%;
+  width: 100%;
+}
+
+.top_block{
+  height: 200rpx;
+  background-color: #64b917;
+  color: white;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.top_button_block{
+  text-align: center;
+  display: flex;
+  width: 100%;
+  padding-top: 50rpx; 
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.iconfont{
+  font-size: 50rpx;
+}
+.title{
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.add_button{
+  position: fixed;
+  bottom: 150rpx;
+  right: 100rpx;
+  background-color: #64b917;
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50rpx;
+  z-index: 200;
+}

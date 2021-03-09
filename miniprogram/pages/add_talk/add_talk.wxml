@@ -1,0 +1,15 @@
+<!--miniprogram/pages/add_talk/add_talk.wxml-->
+<view class="outside_block">
+  <!-- form表单可以在提交时统一显示用户填写的表单组件内容 -->
+  <form id="new" bindsubmit="newSubmit">
+    <view class="image_block">
+      <image id="new_img" src="{{imgUrl}}" mode="widthFix"></image>
+      <button id="upload_image" type="default" bindtap="upload">上传</button>
+      <button id="cancel_image" type="warn" bindtap="cancel">清空</button>
+    </view>
+    <view class="content_block">
+      <textarea id="content_input" name="content" placeholder="请输入内容(150字)" maxlength="150"></textarea>
+    </view>
+    <button id="submit" type="primary" form-type="submit">提交</button>
+  </form>
+</view>
